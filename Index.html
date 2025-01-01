@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A heartfelt New Year project for Suhani di with animations and photos.">
+    <meta name="keywords" content="New Year, Greeting, Suhani di, Animation, HTML, CSS">
+    <meta name="author" content="Your Name">
+    <title>Kutti 😔🤗</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #ff7eb3, #ff758c);
+            overflow-x: hidden;
+        }
+
+        .card-container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            text-align: center;
+            animation: fadeInCard 2s;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-title {
+            font-size: 3em;
+            color: #e91e63;
+            margin-bottom: 20px;
+            animation: zoomIn 1.5s;
+            position: relative;
+            z-index: 10;
+        }
+
+        .photo-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+
+        .photo-container img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .lines {
+            font-size: 1.5em;
+            color: #444;
+            margin: 30px 0;
+            line-height: 2;
+            animation: slideUp 2s;
+            position: relative;
+            z-index: 10;
+        }
+
+        .floating-hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .floating-hearts span {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgba(233, 30, 99, 0.8);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            animation: floatHearts 5s infinite ease-in-out;
+            opacity: 0.8;
+        }
+
+        @keyframes fadeInCard {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes floatHearts {
+            0% {
+                transform: translateY(100%) scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-200%) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        .floating-hearts span:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-hearts span:nth-child(2) {
+            left: 30%;
+            animation-delay: 1s;
+        }
+
+        .floating-hearts span:nth-child(3) {
+            left: 50%;
+            animation-delay: 2s;
+        }
+
+        .floating-hearts span:nth-child(4) {
+            left: 70%;
+            animation-delay: 3s;
+        }
+
+        .floating-hearts span:nth-child(5) {
+            left: 90%;
+            animation-delay: 4s;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <h1 class="card-title">Suhani di</h1>
+
+        <div class="photo-container">
+            <img src="2.jpg" alt="Photo 1">
+            <img src="3.jpg" alt="Photo 2">
+            <img src="4.jpg" alt="Photo 3">
+            <img src="5.jpg" alt="Photo 4">
+            <img src="6.jpg" alt="Photo 5">
+            <img src="7.png" alt="Photo 6">
+            <img src="8.jpg" alt="Photo 7">
+        </div>
+
+        <div class="lines">
+            <p>Hi 👋</p>
+            <p>2. Suhani di, please read carefully 🤱.</p>
+            <p>3. I will be with you in every happy moment 😊❤️.</p>
+            <p>4. I will be the solution to all your problems 💡💪.</p>
+            <p>5. I will always help fulfill your dreams 🌟✨.</p>
+            <p>6. I will never lie to you (maybe a little white lie, but nothing big 🫶🤝).</p>
+            <p>7. I will understand your sadness and problems as my own 😔🤗.</p>
+            <p>8. I will always be your backend support system 🛡️🌈.</p>
+            <p>9. Please never ignore me; it hurts 😔.</p>
+            <p>10. If I make a mistake, please forgive me 🌟✨.</p>
+        </div>
+
+        <div class="floating-hearts">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</body>
+</html>
